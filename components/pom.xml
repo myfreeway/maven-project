@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.xxorg</groupId>
+		<artifactId>top-parent</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>group-build</artifactId>
+	<packaging>pom</packaging>
+
+	<name>${project.artifactId}</name>
+	<description>build and deploy all components except common project in one time</description>
+
+	<modules>
+		<!-- 组合包 -->
+		<module>pack/json-pack</module>
+		<!-- 组合包的bom定义 -->
+		<module>bom/pack-bom</module>
+
+		<!-- common项目父pom -->
+		<module>common/common-parent</module>
+		<!-- common项目的bom定义 -->
+		<module>bom/common-bom</module>
+		<!-- 业务项目的直接父pom -->
+		<module>parent</module>
+
+	</modules>
+</project>

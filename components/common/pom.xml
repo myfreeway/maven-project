@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.xxorg</groupId>
+		<artifactId>top-parent</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.xxorg.common</groupId>
+	<artifactId>group-common-build</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
+	<description>批量对common lib项目打包，先构建components/pom.xml，再构建本pom.xml</description>
+
+	<modules>
+		<module>common-demo1</module>
+		<module>common-demo2</module>
+	</modules>
+</project>

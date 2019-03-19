@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.xxorg</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.xxorg.biz</groupId>
+	<artifactId>biz-demo1-app</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.1-SNAPSHOT</version>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>com.xxorg.soa</groupId>
+			<artifactId>order-api</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- commonlib -->
+		<dependency>
+			<groupId>com.xxorg.common</groupId>
+			<artifactId>common-demo2</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.xxorg.pack</groupId>
+			<artifactId>json-pack</artifactId>
+			<type>pom</type>
+		</dependency>
+		
+	</dependencies>
+</project>

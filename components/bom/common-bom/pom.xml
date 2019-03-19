@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.xxorg</groupId>
+		<artifactId>top-parent</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.xxorg</groupId>
+	<artifactId>common-bom</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
+    <description>common项目的bom定义，依赖项可以是不存在的，尚未构建的</description>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.xxorg.common</groupId>
+                <artifactId>common-demo1</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xxorg.common</groupId>
+                <artifactId>common-demo2</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <!-- 可以是不存在的，尚未构建的包。比如这里的demo3其实不存在，但依然可以deploy本pom -->
+            <dependency>
+                <groupId>com.xxorg.common</groupId>
+                <artifactId>common-demo3</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
