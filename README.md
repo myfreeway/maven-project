@@ -1,6 +1,26 @@
 # maven-project
 面向组织的maven项目结构
 
+## 目录结构
+├─biz-app
+│  └─biz-demo1-app
+├─common-service
+│  └─order-soa
+│      ├─order-api
+│      └─order-service
+└─components
+    ├─bom
+    │  ├─common-bom
+    │  └─pack-bom
+    ├─common
+    │  ├─common-demo1
+    │  ├─common-demo2
+    │  └─common-parent
+    ├─pack
+    │  └─json-pack
+    ├─parent
+    └─top-parent
+
 工程化思路
 ====
 1. maven的dependencyManagement和dependencies特性。dependencyManagement预定义包，dependencies只需指定group和artifactId，版本号继承而来。好处是统一管理版本号，避免混乱，对升级友好。
