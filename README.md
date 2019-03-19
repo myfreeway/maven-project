@@ -2,6 +2,8 @@
 面向组织的maven项目结构
 
 ## 目录结构
+
+```txt
 ├─biz-app
 │  └─biz-demo1-app
 ├─common-service
@@ -20,6 +22,7 @@
     │  └─json-pack
     ├─parent
     └─top-parent
+```
 
 工程化思路
 ====
