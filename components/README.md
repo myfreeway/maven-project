@@ -23,3 +23,10 @@
 1. 修改top-parent的maven仓库路径
 2. 修改包名
 3. 规划自己的公包和私包，并修改
+
+项目思路
+====
+1. maven的dependencyManagement和dependencies特性。dependencyManagement预定义包，dependencies只需指定group和artifactId，版本号继承而来。好处是统一管理版本号，避免混乱，对升级友好。
+2. 发挥maven的继承特性，将很多统一配置放在顶级父pom，简化子项目的配置。比如构建，源码上传路径等。
+3. 使用bom对一系列jar包进行封装，简化使用。
+4. 从工程角度考虑项目结构，提高组织的开发效率。
